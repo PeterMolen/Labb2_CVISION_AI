@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Image Analysis";
+}
+
+<!-- Container for centering and styling -->
+<div style="max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <h1>@ViewBag.Title</h1>
+    <h3>Upload an image or choose one from the internet</h3>
+    <h7>From the internet: Right-click on the image that you want to analyze, choose "Copy image link," and paste it into the Image URL field.</h7>
+
+
+    @using (Html.BeginForm("AnalyzeImage", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+            <div style="width: 100%; max-width: 500px;">
+                <label for="imageUrl" style="display: block; margin-bottom: 5px;">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" style="width: 100%; box-sizing: border-box;" />
+            </div>
+
+            <div style="width: 100%; max-width: 500px;">
+                <label for="file" style="display: block; margin-bottom: 5px;">Or upload a file:</label>
+                <input type="file" id="file" name="file" style="width: 100%; box-sizing: border-box;" />
+            </div>
+
+            <div style="width: 100%; max-width: 500px;">
+                <label for="thumbnailWidth" style="display: block; margin-bottom: 5px;">Thumbnail Width:</label>
+                <input type="number" id="thumbnailWidth" name="thumbnailWidth" value="500" style="width: 100%; box-sizing: border-box;" />
+            </div>
+
+            <div style="width: 100%; max-width: 500px;">
+                <label for="thumbnailHeight" style="display: block; margin-bottom: 5px;">Thumbnail Height:</label>
+                <input type="number" id="thumbnailHeight" name="thumbnailHeight" value="500" style="width: 100%; box-sizing: border-box;" />
+            </div>
+
+            <div style="width: 100%; max-width: 500px;">
+                <input type="submit" value="Analyze Image" style="width: 100%; padding: 10px; box-sizing: border-box;" />
+            </div>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p style="color: red; margin-top: 15px;">@ViewBag.ErrorMessage</p>
+    }
+</div>

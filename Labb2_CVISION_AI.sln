@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb2_CVISION_AI", "Labb2_CVISION_AI\Labb2_CVISION_AI.csproj", "{517A776E-2FCC-4F04-885E-B2A6075AEA8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517A776E-2FCC-4F04-885E-B2A6075AEA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517A776E-2FCC-4F04-885E-B2A6075AEA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517A776E-2FCC-4F04-885E-B2A6075AEA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517A776E-2FCC-4F04-885E-B2A6075AEA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7A88CB2-FB79-45F5-8B3B-7D5B3C612933}
+	EndGlobalSection
+EndGlobal
